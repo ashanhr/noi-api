@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "472b3927-1824-4282-90b6-f42bdced9ea2",
+		"name": "noi-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all timeline events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/events",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new timeline event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"title4\",\n    \"description\" : \"description4\",\n    \"date\" : \"2020-01-14\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/events/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific timeline event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/events/5ffc7f116ffc133c08426cdd",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"5ffc7f116ffc133c08426cdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a timeline event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/events/delete/5ffc7f196ffc133c08426cde",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"delete",
+						"5ffc7f196ffc133c08426cde"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a timeline event",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\" : \"2020-01-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/events/update/5ffc7f116ffc133c08426cdd",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"update",
+						"5ffc7f116ffc133c08426cdd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
